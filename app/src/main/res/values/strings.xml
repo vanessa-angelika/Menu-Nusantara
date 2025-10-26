@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MenuNusantara</string>
+
+    <string-array name="categories_menu">
+        <item>Makanan</item>
+        <item>Minuman</item>
+        <item>Kue</item>
+    </string-array>
+
+    <string-array name="size_menu">
+        <item>Normal</item>
+        <item>Jumbo</item>
+    </string-array>
+</resources>
