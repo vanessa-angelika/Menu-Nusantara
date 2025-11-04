@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2025 at 02:57 PM
+-- Generation Time: Nov 04, 2025 at 03:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,8 +43,9 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`ID_Menu`, `Nama_Makanan`, `Kategori`, `Harga_Awal`, `Persen_Diskon`, `Porsi`, `Deskripsi`, `Link_Gambar`) VALUES
-(1, 'Ayam Taliwang', 'Makanan', 30000.00, 10, '10', 'Ayam Taliwang merupakan hidangan khas Lombok, Indonesia yang terkenal dengan rasa pedas dan gurih. Ayam ini dibakar atau dipanggang dengan bumbu kaya rempah seperti cabai, bawang putih, terasi, dan jeruk nipis, menghasilkan rasa pedas, manis, dan sedikit asam yang lezat.', 'https://od.lk/s/NThfNDc5MjU3MTVf/Ayam%20Taliwang.png'),
-(2, 'ahihihi', 'Makanan', 99999.00, 10, 'Jumbo', 'orak tau West nyoba bae ayam taliwang wangan coba aja testing kalimat', 'https://od.lk/s/NThfNDc5MjU3MTVf/Ayam%20Taliwang.png');
+(8, 'Lapis Legit', 'Kue', 120000.00, 15, 'Jumbo', 'Lapis legit adalah kue tradisional dengan lapisan-lapisan tipis dari adonan telur, mentega, dan gula. Rasa manis dan tekstur lembutnya membuatnya populer di acara-acara khusus.', 'https://od.lk/s/NThfNDc5MjU3MjJf/Lapis%20Legit.png'),
+(9, 'Es Teler Segar', 'Minuman', 15000.00, 10, 'Jumbo', 'Es teler adalah minuman segar dari campuran buah-buahan seperti alpukat, nangka, dan kelapa muda, ditambah es serut, susu kental manis, dan sirup. Rasa manis dan dingin membuatnya sangat menyegarkan, terutama di hari panas.', 'https://od.lk/s/NThfNDc5MjU3MjRf/Es%20Teler.png'),
+(10, 'Ayam Taliwang', 'Makanan', 30000.00, 10, 'Normal', 'Ayam Taliwang merupakan hidangan khas Lombok, Indonesia yang terkenal dengan rasa pedas dan gurih. Ayam ini dibakar atau dipanggang dengan bumbu kaya rempah seperti cabai, bawang putih, terasi, dan jeruk nipis, menghasilkan rasa pedas, manis, dan sedikit asam yang lezat.', 'https://od.lk/s/NThfNDc5MjU3MTVf/Ayam%20Taliwang.png');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +65,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `ID_Menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_Menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
