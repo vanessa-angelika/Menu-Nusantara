@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
     // BASE URL telah diperbaiki menjadi '/menunusantara/' sesuai konteks Anda
-    private static final String baseURL = "http://192.168.18.12/menunusantara/";
+    private static final String baseURL = "http://192.168.43.70/menunusantara/";
 
     private static Retrofit retrofit;
 
