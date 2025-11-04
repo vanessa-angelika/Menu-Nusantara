@@ -10,36 +10,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
 
-        // Cek apakah menu ada pada tabel detail_pesanan
-        $checkQuery = "SELECT * FROM detail_pesanan WHERE ID_Menu = '$id'";
-        $checkResult = mysqli_query($konek, $checkQuery);
+        // Lakukan penghapusan data langsung
+        $deleteQuery = "DELETE FROM menu WHERE ID_Menu = '$id'";
+        $deleteResult = mysqli_query($konek, $deleteQuery);
 
-        // Jika ada data pada detail_pesanan
-        if (mysqli_num_rows($checkResult) > 0) {
-            $response["success"] = false;
-            $response["message"] = "Menu tidak dapat dihapus karena terdapat dalam pesanan.";
+        // Cek apakah query berhasil dieksekusi
+        if ($deleteResult) {
+            $response["success"] = true;
+            $response["message"] = "Menu berhasil dihapus";
         } else {
-            // Jika menu tidak ada pada detail_pesanan, lakukan penghapusan
-            $deleteQuery = "DELETE FROM menu WHERE ID_Menu = '$id'";
-            $deleteResult = mysqli_query($konek, $deleteQuery);
-
-            // Cek apakah query berhasil dieksekusi
-            if ($deleteResult) {
-                $response["success"] = true;
-                $response["message"] = "Menu berhasil dihapus";
-            } else {
-                $response["success"] = false;
-                $response["message"] = "Gagal menghapus menu";
-            }
+            $response["success"] = false;
+            $response["message"] = "Gagal menghapus menu";
         }
     } else {
-        // Jika parameter 'id' tidak ditemukan dalam POST
         $response["success"] = false;
         $response["message"] = "ID Tidak Ditemukan";
     }
-}
-// Jika request method bukan POST
-else {
+} else {
     $response["success"] = false;
     $response["message"] = "Tidak Ada Post Data";
 }
